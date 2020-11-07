@@ -4,11 +4,11 @@ from discord.ext import commands
 
 client = commands.Bot(command_prefix="")
 
-f = open("rules.io","r")
+f = open("rules.txt","r")
 rules = f.readlines()
 f.close()
 
-fLink = open("server.io","r")
+fLink = open("server.txt","r")
 server_link = fLink.readlines()
 fLink.close()
 
