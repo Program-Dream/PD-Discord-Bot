@@ -9,3 +9,6 @@ This bot is useful for moderating channels where there's lots of people.
 It removes bad words, invite links and more.
 
 Add your own rules on `rules.txt` and server invite links on `server.txt`
+
+### Our Discord server!
+https://discord.gg/gfmaxgE
