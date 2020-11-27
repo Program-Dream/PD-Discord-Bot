@@ -7,19 +7,19 @@ from discord.ext import commands
 
 #Files Reading Io
 
-f = open("dataBase\\rules.io","r")
+f = open("rules.io","r")
 rules = f.readlines()
 f.close()
 
-fLink = open("dataBase\\server.io","r")
+fLink = open("server.io","r")
 server_link = fLink.readlines()
 fLink.close()
 
-with open("dataBase\\filterWord.io","r") as filterwr:
+with open("filterWord.io","r") as filterwr:
     filteredWords = filterwr.read().split('\n')
     filterwr.close()
 
-warningWords = open("dataBase\\warningWord.io","r").read().split('\n')
+warningWords = open("warningWord.io","r").read().split('\n')
 
 greetingWords = ["Hey","Hello","Hi"]
 
@@ -67,8 +67,8 @@ async def randomImage(ctx):
     try:
         response = requests.get('https://source.unsplash.com/random')
         img = Image.open(BytesIO(response.content))
-        img.save('dataBase\\Images\\random.jpg')
-        await ctx.send(file = discord.File("dataBase\\Images\\random.jpg"))
+        img.save('random.jpg')
+        await ctx.send(file = discord.File("random.jpg"))
 
     except:
         await ctx.send("Now, no random Image Present")
